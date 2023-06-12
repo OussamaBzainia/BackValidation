@@ -386,7 +386,7 @@ export async function sendpasswordEmail(req, res) {
       }
     )
       .then(async (docs) => {
-        sendEmail(user.email, "Password Reset", OTP);
+        sendEmail(user.email, "Reset Password", OTP);
         user.otpReset = OTP;
         res.status(200).json(user);
       })
